@@ -3,7 +3,7 @@
 
 #include "linked_list.h"
 
-class List : protected LinkedList {
+class List : public LinkedList {
 public:
     void insert(int index, int value);
     int get(int index);
