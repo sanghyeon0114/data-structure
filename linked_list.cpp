@@ -20,7 +20,7 @@ LinkedList::~LinkedList() {
 void LinkedList::print() {
     Node* p = head_;
     while(p != nullptr) {
-        std::cout << p->value_ << " - ";
+        std::cout << p->value_ << " ";
         p = p->next_;
     }
     std::cout << std::endl;
@@ -57,6 +57,10 @@ void LinkedList::insert(int index, int value) {
 }
 
 int LinkedList::get(int index) {
+    if(head_ == nullptr) {
+        return -1;
+    }
+    
     Node *cur = head_;
     int indexCount = index;
     while(cur->next_ != nullptr && indexCount-- > 0) {

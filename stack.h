@@ -8,7 +8,7 @@ public:
     void push(int data);
     int pop();
     int peek();
-    bool operator+=(int value);
+    void operator+=(int value);
 };
 
 #endif
